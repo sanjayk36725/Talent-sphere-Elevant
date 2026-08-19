@@ -1,88 +1,135 @@
+<div align="center">
+🛡️ NeoExamShield
+Next-Gen AI-Powered Secure Examination Platform
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=22D3EE&center=true&vCenter=true&width=600&lines=Real-Time+Proctoring+Engine;Face+%2B+Audio+Detection;AI-Powered+Evaluation+with+Gemini;Tamper-Proof+Exam+Environment" alt="Typing SVG" />
 
+Show Image Show Image Show Image Show Image Show Image Show Image
 
-# NeoExamShield 🛡️
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:22D3EE,100:6366F1&height=120&section=header" width="100%"/> </div>
+📚 Table of Contents
+Features
+Tech Stack
+Getting Started
+Environment Variables
+Available Scripts
+Proctoring Flow
+Project Structure
+Contributing
+License
+✨ Features
+Advanced Proctoring System
+Capability	Description
+Live Camera & Face Detection	Continuously monitors test-taker; ensures face stays visible.
+Audio & Microphone Monitoring	Real-time mic level sensing catches ambient noise or talking.
+Strict Protocol Enforcement	Disables right-click, copy, paste, text selection.
+Tab & Window Focus Lock	Detects fullscreen exit or tab switch; triggers auto warning.
+Extension Integration	Requires verified Chrome extension for tamper-proof setup.
+Three-Strike Warning System	Auto-terminates + auto-submits exam after 3 violations.
+AI-Powered Evaluation
 
-A next-generation, high-security online examination platform with built-in advanced proctoring capabilities. Built with React, TypeScript, and powered by Gemini AI, it ensures academic integrity through real-time monitoring and strict protocol enforcement.
+Uses @google/genai to analyze responses, surface insights, generate questions dynamically.
 
-## ✨ Features
+Rich, Interactive UI
+Dashboards via TailwindCSS + Framer Motion
+Charts via Recharts
+Icons via Lucide React
+Comprehensive Exam Delivery
+Detailed MCQ rendering
+PDF reports via jsPDF + jsPDF-AutoTable
+Auto email notifications via Nodemailer + Express
+🛠️ Tech Stack
+<div align="center">
 
-- **Advanced Proctoring System (`NeoExamShield`)**
-  - **Live Camera & Face Detection:** Continuously monitors the test-taker to ensure their face is clearly visible.
-  - **Audio & Microphone Monitoring:** Real-time microphone level sensing to detect suspicious ambient sounds or talking.
-  - **Strict Protocol Enforcement:** Disables right-click, copy, paste, and text selection.
-  - **Tab & Window Focus Lock:** Detects if the user leaves the fullscreen mode or switches tabs, triggering automatic warnings.
-  - **Extension Integration:** Requires a verified Chrome extension to ensure a tamper-proof environment.
-  - **Three-Strike Warning System:** Automatically terminates and submits the exam if the user violates protocols 3 times.
+Show Image Show Image Show Image Show Image Show Image Show Image Show Image
 
-- **AI-Powered Evaluation**
-  - Integrates `@google/genai` to analyze exam responses, provide insights, or generate questions dynamically.
+</div>
+Layer	Technologies
+Frontend	React 19, TypeScript, Vite, TailwindCSS 4.1
+Backend/Scripts	Node.js, Express, TSX, esbuild
+AI Integration	Google Gemini AI API (@google/genai)
+Styling & Animation	TailwindCSS, Motion
+Utilities	Lucide React (icons), Recharts (charts), jsPDF (PDF export)
+🚀 Getting Started
+Prerequisites
+Node.js v18+
+Google Gemini API Key
+Installation
+bash
+git clone <your-repository-url>
+cd MILESTONE4
+npm install
+Environment Setup
 
-- **Rich, Interactive UI**
-  - Beautiful dashboards powered by `tailwindcss` and `framer-motion` (Motion).
-  - Data visualization using `recharts`.
-  - Iconography provided by `lucide-react`.
+Create .env in root (use .env.example as template):
 
-- **Comprehensive Exam Delivery**
-  - Supports detailed MCQ rendering.
-  - Built-in PDF generation for reports using `jspdf` and `jspdf-autotable`.
-  - Automatic email notifications using `nodemailer` and `express`.
+env
+GEMINI_API_KEY=your_api_key_here
+Run Dev Server
+bash
+npm run dev
 
-## 🛠️ Tech Stack
+App runs on default Vite port — usually http://localhost:5173.
 
-- **Frontend:** React 19, TypeScript, Vite, TailwindCSS 4.1
-- **Backend/Scripts:** Node.js, Express, TSX, esbuild
-- **AI Integration:** Google Gemini AI API (`@google/genai`)
-- **Styling & Animations:** TailwindCSS, Motion
-- **Utilities:** Lucide React (Icons), Recharts (Charts), jsPDF (PDF export)
-
-## 🚀 Getting Started
-
-### Prerequisites
-- [Node.js](https://nodejs.org/en/) (v18+ recommended)
-- A [Google Gemini API Key](https://aistudio.google.com/app/apikey)
-
-### Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone <your-repository-url>
-   cd MILESTONE4
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Environment Setup:**
-   Create a `.env` file in the root directory (you can use `.env.example` as a template) and add your Gemini API Key:
-   ```env
-   GEMINI_API_KEY=your_api_key_here
-   ```
-
-4. **Run the Development Server:**
-   ```bash
-   npm run dev
-   ```
-   The app will start on the default Vite port (usually `http://localhost:5173`).
-
-### Production Build
-To build the project for production:
-```bash
+Production Build
+bash
 npm run build
-```
-To start the built server:
-```bash
 npm start
-```
+🔑 Environment Variables
+Variable	Required	Description
+GEMINI_API_KEY	✅	API key for Google Gemini AI integration
+📜 Available Scripts
+Script	Description
+npm run dev	Starts Vite dev server
+npm run build	Builds app for production
+npm start	Starts production server
+🔒 Proctoring Flow
+No
+Yes
+Yes
+Yes
+No
+No
+Student opens exam URL
+NeoExamShield componentinitializes
+Camera + Microphonepermission prompt
+Chrome Extension verified?
+Block start
+Click 'Start Examination &Lock Fullscreen'
+Exam runs in lockedenvironment
+Violation detected?tab switch / face lost /copy-paste
+Issue warning +1
+3 warnings reached?
+Auto-terminate +auto-submit
+Student navigates to exam URL.
+NeoExamShield component initializes.
+Student authorizes Camera and Microphone.
+System verifies NeoExamShield Chrome Extension installed.
+Student clicks "Start Examination & Lock Fullscreen".
+Exam runs locked — any deviation issues warning.
+After 3 warnings → auto-terminate + auto-submit.
+📁 Project Structure
+MILESTONE4/
+├── src/
+│   ├── components/     # React components (NeoExamShield, MCQ renderer, dashboards)
+│   ├── hooks/          # Custom hooks (camera, mic, focus-lock)
+│   ├── services/       # Gemini AI, PDF, email services
+│   └── ...
+├── server/              # Express backend
+├── .env.example
+├── package.json
+└── README.md
+🤝 Contributing
+Fork repo
+Branch: git checkout -b feature/your-feature
+Commit: git commit -m 'Add feature'
+Push: git push origin feature/your-feature
+Open Pull Request
+📄 License
 
-## 🔒 Proctoring Flow
+MIT — see LICENSE file.
 
-1. The student navigates to the exam URL.
-2. The `NeoExamShield` component initializes.
-3. The student is prompted to authorize Camera and Microphone permissions.
-4. The system verifies if the NeoExamShield Chrome Extension is installed.
-5. The student clicks "Start Examination & Lock Fullscreen".
-6. The test begins in a locked environment. Any deviation (tab switch, face lost, copy/paste) issues a warning.
+<div align="center"> <img src="https://capsule-render.vercel.app/api?type=waving&color=0:6366F1,100:22D3EE&height=100&section=footer" width="100%"/>
 
+Built with 🛡️ for academic integrity
 
+</div>
