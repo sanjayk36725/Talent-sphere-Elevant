@@ -1,6 +1,4 @@
-<div align="center">
-  <img src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" alt="NeoExamShield Banner" width="1200" height="475" />
-</div>
+
 
 # NeoExamShield 🛡️
 
