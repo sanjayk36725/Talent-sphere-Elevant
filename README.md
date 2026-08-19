@@ -85,6 +85,4 @@ npm start
 5. The student clicks "Start Examination & Lock Fullscreen".
 6. The test begins in a locked environment. Any deviation (tab switch, face lost, copy/paste) issues a warning.
 
----
 
-*This project was bootstrapped using Vite and integrates with Google AI Studio.*
