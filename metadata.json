@@ -1,0 +1,6 @@
+{
+  "name": "Talent Management Platform for Employee Performance and Career Growth",
+  "description": "AI-powered cross-domain talent development, assessment, learning, career guidance & intelligent assistance platform with progressive day-wise RAG, OCR, and automated email notifications.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
